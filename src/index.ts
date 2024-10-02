@@ -1,3 +1,4 @@
-import SimpleEvent from "./interface/SimpleEvent";
+import SimpleEvent, { ISimpleEvent } from "./interface/SimpleEvent";
 
 export { SimpleEvent };
+export type { ISimpleEvent };

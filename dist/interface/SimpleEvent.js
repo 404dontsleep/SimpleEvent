@@ -1,6 +1,6 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
-class AbstractSimpleEvent {
+class SimpleEvent {
     constructor() {
         this.listeners = [];
     }
@@ -28,4 +28,4 @@ class AbstractSimpleEvent {
         this.parent = parent;
     }
 }
-exports.default = AbstractSimpleEvent;
+exports.default = SimpleEvent;

@@ -32,3 +32,4 @@ class SimpleEvent<T> {
 }
 
 export default SimpleEvent;
+export type { ISimpleEvent };
