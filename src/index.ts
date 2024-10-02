@@ -1,3 +1,3 @@
-import AbstractSimpleEvent from "./interface/AbstractSimpleEvent";
+import SimpleEvent from "./interface/SimpleEvent";
 
-export { AbstractSimpleEvent };
+export { SimpleEvent };

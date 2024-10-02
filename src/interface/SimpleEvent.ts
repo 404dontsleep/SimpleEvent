@@ -1,10 +1,13 @@
-abstract class AbstractSimpleEvent<T> {
-  private parent?: AbstractSimpleEvent<T>;
+interface ISimpleEvent<T> {
+  (data: T): void;
+}
+class SimpleEvent<T> {
+  private parent?: SimpleEvent<T>;
   private listeners: Array<(data: T) => void> = [];
-  public addListener(listener: (data: T) => void): void {
+  public addListener(listener: ISimpleEvent<T>): void {
     this.listeners.push(listener);
   }
-  public removeListener(listener: (data: T) => void): void {
+  public removeListener(listener: ISimpleEvent<T>): void {
     const index = this.listeners.indexOf(listener);
     if (index !== -1) {
       this.listeners.splice(index, 1);
@@ -23,9 +26,9 @@ abstract class AbstractSimpleEvent<T> {
     }
   }
 
-  public setParent(parent: AbstractSimpleEvent<T>): void {
+  public setParent(parent: SimpleEvent<T>): void {
     this.parent = parent;
   }
 }
 
-export default AbstractSimpleEvent;
+export default SimpleEvent;
